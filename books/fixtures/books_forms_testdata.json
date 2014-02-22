@@ -1,0 +1,32 @@
+[
+{
+    "pk": 1, 
+    "model": "books.book", 
+    "fields": {
+        "category": "classic", 
+        "price": 50, 
+        "author": "F. Scott Fitzgerald", 
+        "title": "The Great Gatsby"
+    }
+},
+{
+    "pk": 2, 
+    "model": "books.book", 
+    "fields": {
+        "category": "classic", 
+        "price": 40, 
+        "author": "Charlotte Bronte", 
+        "title": "Jane Eyre"
+    }
+},
+{
+    "pk": 3, 
+    "model": "books.book", 
+    "fields": {
+        "category": "expert", 
+        "price": 60, 
+        "author": "John von Neumann", 
+        "title": "The Computer and the Brain"
+    }
+}
+]

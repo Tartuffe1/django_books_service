@@ -1,0 +1,4 @@
+*.pyc
+*.swp
+# Output directory with results of compailing and build:
+target/*
