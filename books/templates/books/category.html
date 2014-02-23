@@ -1,0 +1,23 @@
+{% extends "books/base.html" %}
+
+{% block content %} 
+   
+   {% if category_list.count > 0 %}
+       
+        {% for book in category_list %}
+          <p>
+              <span>Title: {{ book.title }}</span>
+              <br>
+              <span>Author: {{ book.author }}</span> 
+              <br>
+              <span>Price: {{ book.price }}</span>
+              <br>
+              <span><a href={% url "books:detail" book.id %}>Details </a> </span>
+          </p> 
+        {% endfor %}
+           
+   {% else %}
+       <p> None for show! </p>
+   {% endif %}
+
+{% endblock %}

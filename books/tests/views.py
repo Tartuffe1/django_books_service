@@ -29,5 +29,24 @@ class BooksViewsTestCase(TestCase):
       resp = self.client.get(reverse('books:detail',kwargs={'book_id':11}))
       self.assertEqual(resp.status_code, 404)
       
+    def test_category(self):
+      resp = self.client.get(reverse('books:category', kwargs= {'book_category': 'classic'}))
+      self.assertEqual(resp.status_code, 200)
+      self.assertTrue('category_list' in resp.context)
+      self.assertEqual([book.pk for book in resp.context['category_list']], [1,2])
+      
+      book_1 = resp.context['category_list'][0]
+      self.assertEqual(book_1.title, "The Great Gatsby")
+      self.assertEqual(book_1.author, "F. Scott Fitzgerald")
+      self.assertEqual(book_1.category, "classic")
+      self.assertEqual(book_1.price, 50)
+      
+      book_2 = resp.context['category_list'][1]
+      self.assertEqual(book_2.title, "Jane Eyre")
+      self.assertEqual(book_2.author, "Charlotte Bronte")
+      self.assertEqual(book_2.category, "classic")
+      self.assertEqual(book_2.price, 40)
+      
+      
     
     
