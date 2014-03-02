@@ -6,6 +6,9 @@ from forms import BookForm
 from django.core.context_processors import csrf
 from django.http import HttpResponseRedirect
 
+# we'll use more complex filter conditions for search tool
+from django.db.models import Q
+
 # all books from database 
 def books(request):
     latest_book_list = Book.objects.all()
@@ -21,7 +24,7 @@ def book(request, book_id):
 #page visitor is able to add book
 def add_book(request):
    if request.method == 'POST':
-      form=BookForm(request.POST)
+      form=BookForm(request.POST, request.FILES)
       if form.is_valid():
          form.save()
          return HttpResponseRedirect('/books/all/')
@@ -42,3 +45,13 @@ def category(request, book_category):
    
   args['category_list']= category_list
   return render(request, 'books/category.html', args)
+  
+def search(request):
+   if request.method == 'POST':
+      search_text=request.POST['search_text']
+   else:
+      search_text=''
+      
+   books=Book.objects.filter(Q(title__contains=search_text) | Q(author__contains=search_text))
+   
+   return render(request,'books/search.html',{'books_found': books})

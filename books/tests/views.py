@@ -47,6 +47,21 @@ class BooksViewsTestCase(TestCase):
       self.assertEqual(book_2.category, "classic")
       self.assertEqual(book_2.price, 40)
       
+    def test_search(self):
+      resp = self.client.post('/books/search/',{'search_text': 'Neumann',}, HTTP_X_REQUESTED_WITH='XMLHttpRequest')
+      self.assertEqual(resp.status_code, 200)
+      self.assertTrue('books_found' in resp.context)
+      self.assertEqual([book.pk for book in resp.context['books_found']], [3])
+      
+      book_1 = resp.context['books_found'][0]
+      self.assertEqual(book_1.title, "The Computer and the Brain")
+      self.assertEqual(book_1.author, "John von Neumann")
+      self.assertEqual(book_1.category, "expert")
+      self.assertEqual(book_1.price, 60)
+      
+      
+
+
       
     
     

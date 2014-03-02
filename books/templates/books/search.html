@@ -1,0 +1,19 @@
+   {% if books_found.count > 0 %}
+       
+        <h3>Search results:</h3>
+        {% for book in books_found %}
+          <p>
+              <span>Title: {{ book.title }}</span>
+              <br>
+              <span>Author: {{ book.author }}</span> 
+              <br>
+              <span>Price: {{ book.price }}</span>
+              <br>
+              <!--using of {% url "books:detail" book.id %} doesn't work here -->
+              <span><a href="/books/get/{{ book.id }}/">Details </a> </span>
+          </p>
+        {% endfor %}
+           
+   {% else %}
+       <p> None for show! </p>
+   {% endif %}
