@@ -21,3 +21,24 @@ border: 1px solid #000;
 width: 600px;
 padding: 15px;
 }
+
+.image { 
+margin-right:10px; 
+margin-bottom: 10px;
+border:0;  
+float:left; 
+width:130px; 
+height: 150px;
+}
+
+.bigImage {
+float:left;
+width:192px;
+height: 270px;
+margin: 4px 4px 0 0;
+border: 5px solid #C5BDBD; 
+}
+
+.clear {
+clear: both;
+}

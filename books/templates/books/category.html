@@ -5,7 +5,7 @@
    {% if category_list.count > 0 %}
        
         {% for book in category_list %}
-          <p>
+              <img src="/media/{{ book.docfile }}" class="image" />
               <span>Title: {{ book.title }}</span>
               <br>
               <span>Author: {{ book.author }}</span> 
@@ -13,7 +13,7 @@
               <span>Price: {{ book.price }}</span>
               <br>
               <span><a href={% url "books:detail" book.id %}>Details </a> </span>
-          </p> 
+              <div class="clear"></div>
         {% endfor %}
            
    {% else %}
