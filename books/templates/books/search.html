@@ -2,7 +2,9 @@
        
         <h3>Search results:</h3>
         {% for book in books_found %}
+
               <img src="/media/{{ book.docfile }}" class="image" />
+
               <span>Title: {{ book.title }}</span>
               <br>
               <span>Author: {{ book.author }}</span> 
@@ -11,7 +13,9 @@
               <br>
               <!--using of {% url "books:detail" book.id %} doesn't work here -->
               <span><a href="/books/get/{{ book.id }}/">Details </a> </span>
+
               <div class="clear"></div>
+
         {% endfor %}
            
    {% else %}

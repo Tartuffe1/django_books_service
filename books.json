@@ -6,8 +6,8 @@
         "category": "classic", 
         "price": 50, 
         "author": " F. Scott Fitzgerald", 
-        "pages": 1, 
-        "title": "The Great Gatsby"
+        "title": "The Great Gatsby",
+        "docfile": "images/default.jpg"
     }
 },
 {
@@ -17,8 +17,8 @@
         "category": "classic", 
         "price": 40, 
         "author": " Charlotte Bront\u00eb", 
-        "pages": 1, 
-        "title": "Jane Eyre"
+        "title": "Jane Eyre",
+        "docfile": "images/default.jpg"
     }
 },
 {
@@ -28,8 +28,8 @@
         "category": "expert", 
         "price": 60, 
         "author": "John von Neumann", 
-        "pages": 1, 
-        "title": "The Computer and the Brain"
+        "title": "The Computer and the Brain",
+        "docfile": "images/default.jpg"
     }
 },
 {
@@ -39,8 +39,8 @@
         "category": "antiquarian", 
         "price": 500, 
         "author": "W. Wynn Westcott", 
-        "pages": 1, 
-        "title": " Lives of the Adepts in Alchemystical Philosophy"
+        "title": " Lives of the Adepts in Alchemystical Philosophy",
+        "docfile": "images/default.jpg"
     }
 },
 {
@@ -50,8 +50,8 @@
         "category": "foreign", 
         "price": 40, 
         "author": "Slobodan Novak", 
-        "pages": 1, 
-        "title": "Mirisi, zlato i tamjan"
+        "title": "Mirisi, zlato i tamjan",
+        "docfile": "images/default.jpg"
     }
 },
 {
@@ -61,8 +61,8 @@
         "category": "other", 
         "price": 35, 
         "author": " Michael Holley", 
-        "pages": 1, 
-        "title": "War Room"
+        "title": "War Room",
+        "docfile": "images/default.jpg"
     }
 },
 {
@@ -72,8 +72,8 @@
         "category": "classic", 
         "price": 40, 
         "author": "George Orwell", 
-        "pages": 1, 
-        "title": "1984"
+        "title": "1984",
+        "docfile": "images/default.jpg"
     }
 }
 ]
